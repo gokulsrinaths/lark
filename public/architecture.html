@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lark Architecture</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0b0b11;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+  }
+  .diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Row containers */
+  .row { display: flex; align-items: center; justify-content: center; gap: 40px; }
+
+  /* Boxes */
+  .box {
+    border-radius: 14px;
+    padding: 14px 24px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .ai { background: #1a1a26; border: 1px solid #2a2a3a; font-size: 14px; }
+  .ai .sub { font-size: 10px; color: #666; font-weight: 400; margin-top: 2px; }
+
+  .lark {
+    background: linear-gradient(135deg, #1e1218, #18101e);
+    border: 2px solid #f97316;
+    box-shadow: 0 0 30px #f9731625, 0 0 60px #f9731610;
+    padding: 20px 48px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .lark .sub { font-size: 12px; color: #f97316; font-weight: 400; margin-top: 2px; }
+
+  .tool {
+    background: #13131d;
+    border: 1px solid #252535;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 12px 18px;
+    min-width: 130px;
+  }
+  .tool .label { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  .tool .items { font-size: 11px; color: #777; line-height: 1.6; }
+
+  /* Arrows */
+  .arrow {
+    display: flex;
+    justify-content: center;
+    padding: 6px 0;
+    color: #333;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .arrow-wide {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding: 6px 0;
+    color: #333;
+    font-size: 18px;
+  }
+  .arrow-spread {
+    display: flex;
+    justify-content: center;
+    padding: 6px 0;
+    color: #333;
+    font-size: 14px;
+    gap: 60px;
+  }
+</style>
+</head>
+<body>
+
+<div class="diagram">
+
+  <!-- Top: AI models -->
+  <div class="row">
+    <div class="box ai">🤖 ChatGPT<div class="sub">OpenAI</div></div>
+    <div class="box ai">🧠 Claude<div class="sub">Anthropic</div></div>
+  </div>
+
+  <div class="arrow-wide"><span>↓</span><span>↓</span></div>
+
+  <!-- Center: LARK -->
+  <div class="box lark">🐦 LARK<div class="sub">MCP Orchestrator</div></div>
+
+  <div class="arrow-spread"><span>↓</span><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
+
+  <!-- Bottom: Tools -->
+  <div class="row" style="gap: 16px;">
+    <div class="box tool">
+      <div class="label">📞 Phone</div>
+      <div class="items">make-call<br>group-call</div>
+    </div>
+    <div class="box tool">
+      <div class="label">🎵 Music</div>
+      <div class="items">play<br>search</div>
+    </div>
+    <div class="box tool">
+      <div class="label">▶️ YouTube</div>
+      <div class="items">search<br>summarize</div>
+    </div>
+    <div class="box tool">
+      <div class="label">💬 Messages</div>
+      <div class="items">send<br>read</div>
+    </div>
+    <div class="box tool">
+      <div class="label">👤 Contacts</div>
+      <div class="items">add<br>list / remove</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

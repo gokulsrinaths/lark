@@ -1,0 +1,10 @@
+node_modules
+dist
+.mcp-use
+.vite
+.git
+*.log
+.DS_Store
+.env*
+coverage
+PLAN.md
